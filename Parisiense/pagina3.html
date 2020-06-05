@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore|Vibur" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/meuestilo.css">
+        <script src="js/acoes.js"></script>
+        <title>Página 3</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="logo">A PARISIENSE</a></li>
+                    <li><a href="pagina1.html">METRÔ</a></li>
+                    <li><a href="pagina2.html">BISTRÔS</a></li>
+                    <li><a href="pagina3.html">CADASTRO</a></li>
+                    <li><a href="pagina4.html">ALBUM</a></li>
+                    <li><a href="pagina5.html">DICAS</a></li>
+                    <li><a href="pagina6.html">ORÇAMENTO</a></li>
+                    <li style="float: right;">
+                        <form action="">
+                            <input type="text" id="busca" class="lupa" placeholder="BUSCAR">
+                        </form>
+                    </li>
+                    <li style="float: right;"><a href="http://www.tumblr.com" class="icone"><img src="img/tumb.png" alt="" width="42px" height="42px"></a></li>
+                    <li style="float: right;"><a href="http://www.facebook.com" class="icone"><img src="img/face.png" alt="" width="42px" height="42px"></a></li>
+                    <li style="float: right;"><a href="http://www.twitter.com" class="icone"><img src="img/tw.png" alt="" width="42px" height="42px"></a></li>
+                    <li style="float: right;"><a href="http://www.youtube.com" class="icone"><img src="img/yt.png" alt="" width="42px" height="42px"></a></li>
+                    <li style="float: right;"><a href="http://www.pinterest.com" class="icone"><img src="img/pit.png" alt="" width="42px" height="42px"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+                <p id="resultado"></p>
+                <div class="quadroprincipal">
+                        <h2>Cadastro no Site</h2>
+                        <h5>Paris, 06 de setembro de 2018</h5>
+                        <blockquote>
+                            Cadastro no site possibilita você seguir os e-mails do site e conseguir
+                            dicas exclusivas das atrações de París, só com cadastro você participará de 
+                            promoções exclusivas e também receber pode acessar nosso FEED de notícias do site A PARISIENSE. 
+                        </blockquote>
+                        <div class="caixaformulario">
+                            <form method="POST">
+                                <fieldset>
+                                    <legend>Informações Pessoais</legend>
+                                <label for="nome">Nome: </label>
+                                <input type="text" id="nome" placeholder="Digite seu nome.">
+                                <br>
+                                <label for="sobrenome">Sobrenome: </label>
+                                <input type="text" id="sobrenome" placeholder="Digite seu sobrenome.">
+                                <br>
+                                <label for="mail">E-mail: </label>
+                                <input type="email" id="mail"  placeholder="Digite seu e-mail.">
+                                <br>
+                                <label for="telefone">Telefone: </label>
+                                <input type="tel" id="telefone" placeholder="Digite seu telefone.">
+                                <br>
+                                <label for="senha">Senha: </label>
+                                <input type="password" id="senha"  placeholder="Entre com a senha.">
+                                <br>
+                                <label for="genero">Genero: </label>
+                                <select id="genero">
+                                    <option value="V">Genero</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="O">Outros</option>
+                                </select>
+                                <br>
+                                <center>
+                                <input type="reset" id="limpar" value="Limpar">
+                                <input type="submit" id="enviar" value="Enviar">
+                                <button id="verificar" onclick="verificaCampos();">Verificar</button>
+                                </center>
+                            </fieldset>
+                            </form>
+                            <br>
+                            <form oninput="nota.value=parseInt(nota1.value)+parseInt(nota2.value);">
+                                <fieldset>
+                                    <legend>Avaliar o Site</legend>
+                                <label for="designer">Nota para o Designer do site:</label>
+                                <input type="range" id="designer" name="nota1" value="0">
+                                <br>
+                                <label for="conteudo">Nota para o Editorial do site:</label>
+                                <input type="number" id="conteudo" name="nota2" value="0">
+                                <br>
+                                <input type="text" name="nota" id="nota" disabled>
+                                <br>
+                                <center>
+                                <input type="reset" value="Limpar">
+                                <input type="submit" value="Dar uma Nota" onclick="notaGeral();">
+                                </center>
+                                </fieldset>
+                            </form>
+                        </div>
+                </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
